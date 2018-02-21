@@ -25,10 +25,11 @@ func (s Sum) Calculate(count, start, end int, flag string, ch chan int) {
 
 func (s Sum) LetsGo() {
 
-	ncpu := runtime.NumCPU()
+	//ncpu := runtime.NumCPU()
+	ncpu := 8
 	const RANGE = 10000
-	var ch = make(chan int)
-	fmt.Println(runtime.NumCPU())
+	var ch = make(chan int,20)
+	//fmt.Println(runtime.NumCPU())
 
 	runtime.GOMAXPROCS(ncpu)
 	for i := 0; i < ncpu; i++ {
@@ -41,7 +42,7 @@ func (s Sum) LetsGo() {
 }
 
 func main() {
-	var s Sum = make([]int, 8, 8)
+	var s Sum = make([]int, 20, 20)
 	var sum int = 0
 	var startTime = time.Now()
 

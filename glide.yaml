@@ -1,0 +1,3 @@
+package: wqgo
+import:
+- package: golang.org/x/tools/cmd/guru/testdata/src/alias

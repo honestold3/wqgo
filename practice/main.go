@@ -52,6 +52,8 @@ func main() {
 
 	var n N = 11
 
+	fmt.Println("------------------")
+
 	n.test()
 	fmt.Println("n ", &n, n)
 

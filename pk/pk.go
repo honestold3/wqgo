@@ -28,7 +28,7 @@ func (s Sum) LetsGo() {
 	//ncpu := runtime.NumCPU()
 	ncpu := 8
 	const RANGE = 10000
-	var ch = make(chan int,20)
+	var ch = make(chan int,100)
 	//fmt.Println(runtime.NumCPU())
 
 	runtime.GOMAXPROCS(ncpu)

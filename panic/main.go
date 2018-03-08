@@ -37,6 +37,7 @@ func main() {
 	x,y := 1,2
 	defer func() {
 		if err := recover(); err != nil {
+			fmt.Println(err)
 			fmt.Println("ccccc",err)
 		}
 	}()

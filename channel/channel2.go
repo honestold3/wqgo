@@ -1,13 +1,13 @@
 package main
 
-import(
+import (
 	"fmt"
 )
 
 func main1() {
 	done := make(chan struct{})
 	c := make(chan int)
-	go func(){
+	go func() {
 		defer close(done)
 		for {
 			x, ok := <-c
@@ -29,9 +29,9 @@ func main1() {
 func main() {
 	done := make(chan struct{})
 	c := make(chan int)
-	go func(){
+	go func() {
 		defer close(done)
-		for x := range c{
+		for x := range c {
 			fmt.Println(x)
 		}
 	}()

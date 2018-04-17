@@ -7,7 +7,6 @@ import (
 
 	"github.com/AsynkronIT/goconsole"
 	"github.com/AsynkronIT/protoactor-go/actor"
-	"github.com/AsynkronIT/protoactor-go/router"
 )
 
 type Sum []int
@@ -72,12 +71,12 @@ type MasterActor struct {
 
 func (state *MasterActor) Receive(context actor.Context) {
 	state.starttime = time.Now()
-	ncpu := 8
+	ncpu := 4
 	printActor := context.Spawn(actor.FromProducer(func() actor.Actor { return &PrintActor{} }))
 	//PrintActor := actor.Spawn(router.NewRoundRobinPool(5).WithFunc(act))
 
-	//sumActor := context.Spawn(actor.FromProducer(func() actor.Actor { return &SumActor{} }))
-	sumActor := context.Spawn(router.NewRoundRobinPool(ncpu).WithProducer(func() actor.Actor { return &SumActor{} }))
+	sumActor := context.Spawn(actor.FromProducer(func() actor.Actor { return &SumActor{} }))
+	//sumActor := context.Spawn(router.NewRoundRobinPool(ncpu).WithProducer(func() actor.Actor { return &SumActor{} }))
 	//kankan1 := context.Spawn(router.NewRoundRobinPool(ncpu).WithFunc(doWork))
 
 	switch msg := context.Message().(type) {

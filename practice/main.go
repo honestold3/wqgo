@@ -60,6 +60,8 @@ func main() {
 	n.test1()
 	fmt.Println("n1 ", &n, n)
 
+	fmt.Println(kankan())
+
 }
 
 type N int
@@ -73,6 +75,10 @@ func (n *N) test1() {
 	*n++
 	fmt.Println("test1", n, *n)
 
+}
+
+func kankan() (int,string,int) {
+	return 1,"dd",4
 }
 
 /*

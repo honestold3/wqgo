@@ -45,6 +45,7 @@ func main() {
 	fmt.Println(x, y+1)
 	fmt.Println(testdefer())
 
-	panic("is not!!!")
+	//panic("is not!!!")
+	panic(nil)
 	fmt.Println("test panic")
 }

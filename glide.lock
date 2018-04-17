@@ -1,0 +1,38 @@
+hash: a058f22434998465eb655dc7023210c4b5b6329dcdfa8017aedb8c50abd723ec
+updated: 2018-02-23T15:13:57.674096237+08:00
+imports:
+- name: github.com/AsynkronIT/goconsole
+  version: bfa12eebf7161a928e20d11a627cc689e99e2e50
+- name: github.com/AsynkronIT/protoactor-go
+  version: 23232b92d63199249dc68242819328372022d23d
+  subpackages:
+  - actor
+  - eventstream
+  - internal/queue/goring
+  - internal/queue/mpsc
+  - log
+  - mailbox
+- name: github.com/emirpasic/gods
+  version: b2394dfbb6314eeb616db55d1e01928f287da4b4
+  subpackages:
+  - containers
+  - lists
+  - lists/singlylinkedlist
+  - stacks
+  - stacks/linkedliststack
+  - utils
+- name: github.com/gogo/protobuf
+  version: f8f204fd5c977eb54d5a09f3bee74be9a169af67
+  subpackages:
+  - gogoproto
+  - proto
+  - protoc-gen-gogo/descriptor
+- name: github.com/Masterminds/cookoo
+  version: 78aa11ce75e257c51be7ea945edb84cf19c4a6de
+- name: github.com/orcaman/concurrent-map
+  version: d4c23bd0e01134806215ffe65ba3fd22ec6721f7
+- name: github.com/Workiva/go-datastructures
+  version: 900cfe0fd2681ca34fa97071e8fcf4f623679104
+  subpackages:
+  - queue
+testImports: []

@@ -13,6 +13,8 @@ func main() {
 	c <- 3
 	c <- 4
 	fmt.Println(<-c)
+	fmt.Println(<-c)
+	fmt.Println(<-c)
 
 	a := make(chan int, 1)
 	b := make(chan int, 3)

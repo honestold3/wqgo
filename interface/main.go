@@ -21,11 +21,9 @@ func (d data) string() string  {
 }
 
 func main() {
-
 	var d data
 	var i tester
 	i = d
 	i.test()
 	i.string()
-
 }
